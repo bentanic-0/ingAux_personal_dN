@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.OAuth;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -12,37 +14,56 @@ using ServiPuntos.Infrastructure.Middleware;
 using System.Text;
 using System.Security.Claims;
 
-// Creación de la aplicación web ASP.NET Core
+// Creaciï¿½n de la aplicaciï¿½n web ASP.NET Core
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar controladores a la aplicación
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+builder.Logging.SetMinimumLevel(LogLevel.Trace);
+builder.Logging.AddFilter("Microsoft.AspNetCore.Authentication", LogLevel.Trace);
+
+// Agregar controladores a la aplicaciï¿½n
 builder.Services.AddControllersWithViews();
 
-// Agregar servicios de Swagger para documentación de API
+// Agregar servicios de Swagger para documentaciï¿½n de API
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configuración JWT (JSON Web Token)
+// Configuraciï¿½n JWT (JSON Web Token)
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]);
 
-// Configurar servicios de autenticación
+// Aï¿½ade esto en Program.cs antes de construir la aplicaciï¿½n
+// builder.Services.AddDataProtection()
+//     .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "keys")))
+//     .SetApplicationName("ServiPuntos")
+//     .ProtectKeysWithDpapi();
+
+//Soporte de sesion
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Para HTTPS
+    options.Cookie.IsEssential = true;
+    options.Cookie.SameSite = SameSiteMode.Lax;
+});
+
+// Configurar servicios de autenticaciï¿½n
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    // Ya no necesitas DefaultChallengeScheme para Google
 })
 .AddCookie(options =>
 {
-    options.LoginPath = "/api/auth/signin";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.Cookie.SameSite = SameSiteMode.None;
+    options.Cookie.Path = "/";
     options.ExpireTimeSpan = TimeSpan.FromMinutes(120);
-})
-.AddGoogle(options =>
-{
-    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
-    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-    options.CallbackPath = "/api/auth/google-callback";
-    options.SaveTokens = true;
+    options.Cookie.IsEssential = true;
 })
 .AddJwtBearer(options =>
 {
@@ -57,6 +78,19 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(secretKey)
     };
 });
+
+//Con esto permitimos solicitudes desde el frontend-web
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        builder => builder
+            .WithOrigins("http://localhost:3000") // Frontend HTTP
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials() // Importante para enviar cookies
+            .SetIsOriginAllowed(_ => true));
+});
+
 
 // Agregar el servicio JwtTokenService al contenedor de dependencias
 builder.Services.AddScoped<JwtTokenService>();
@@ -73,13 +107,13 @@ builder.Services.AddScoped<ITenantProvider, TenantProvider>();
 builder.Services.AddScoped<ITenantResolver, TenantResolver>();
 builder.Services.AddScoped<ITenantContext, TenantContext>();
 
-// Configuramos la conexión a la base de datos
+// Configuramos la conexiï¿½n a la base de datos
 builder.Services.AddDbContext<TenantConfigurationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<ServiPuntosDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Construye la aplicación web
+// Construye la aplicaciï¿½n web
 var app = builder.Build();
 
 // Configurar el pipeline de solicitudes HTTP (middleware)
@@ -87,15 +121,20 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.MapOpenApi();
 }
 
-// Middleware de resolución de tenant
-app.UseMiddleware<TenantMiddleware>();
-
-app.UseHttpsRedirection();
+app.UseHttpsRedirection(); // Importante para asegurar HTTPS
+app.UseStaticFiles();
+app.UseRouting();
+app.UseCors("AllowReactApp");
+app.UseSession(); 
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllers();
+app.UseMiddleware<TenantMiddleware>();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
 
 app.Run();
