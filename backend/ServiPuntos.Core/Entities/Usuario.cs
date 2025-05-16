@@ -1,4 +1,5 @@
-﻿public class Usuario
+﻿using System.Diagnostics.CodeAnalysis;
+public class Usuario
 {
     public Guid Id { get; set; }
     public string Nombre { get; set; }
@@ -18,6 +19,8 @@
     required public Guid TenantId { get; set; }
 
     //Constructor
+    public Usuario() { }
+    [SetsRequiredMembers]
     public Usuario(string nombre, string email, string password, Guid tenant) {
         Nombre = nombre;
         Email = email;

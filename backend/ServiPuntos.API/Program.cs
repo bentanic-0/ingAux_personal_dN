@@ -35,10 +35,10 @@ var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 var secretKey = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]);
 
 // A�ade esto en Program.cs antes de construir la aplicaci�n
-// builder.Services.AddDataProtection()
-//     .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "keys")))
-//     .SetApplicationName("ServiPuntos")
-//     .ProtectKeysWithDpapi();
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "keys")))
+    .SetApplicationName("ServiPuntos");
+    //.ProtectKeysWithDpapi();
 
 //Soporte de sesion
 builder.Services.AddSession(options =>
@@ -94,7 +94,7 @@ builder.Services.AddCors(options =>
 
 // Agregar el servicio JwtTokenService al contenedor de dependencias
 builder.Services.AddScoped<JwtTokenService>();
-
+builder.Services.AddHttpClient();
 // Servicios Multi-Tenant
 builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
@@ -103,7 +103,6 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddScoped<ITenantProvider, TenantProvider>();
 builder.Services.AddScoped<ITenantResolver, TenantResolver>();
 builder.Services.AddScoped<ITenantContext, TenantContext>();
 
