@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="ServiPuntos.Mobile.Views.TenantSelectionPage">
+    <VerticalStackLayout>
+        <Label Text="Seleccione su estación de servicio:"
+               FontAttributes="Bold"
+               FontSize="22"
+               HorizontalOptions="Center"
+               Margin="0,30,0,10"/>
+        <Button Text="ServiPuntos ANCAP"
+                Clicked="OnAncapClicked"/>
+        <Button Text="ServiPuntos AXION"
+                Clicked="OnAxionClicked"/>
+        <!-- Agregar más tenants según corresponda -->
+    </VerticalStackLayout>
+</ContentPage>

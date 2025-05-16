@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiPuntos.Mobile</name>
+    </assembly>
+    <members>
+        <member name="T:ServiPuntos.Mobile.ViewModels.TenantsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:ServiPuntos.Mobile.ViewModels.TenantsViewModel.loadTenantsCommand">
+            <summary>The backing field for <see cref="P:ServiPuntos.Mobile.ViewModels.TenantsViewModel.LoadTenantsCommand"/>.</summary>
+        </member>
+        <member name="P:ServiPuntos.Mobile.ViewModels.TenantsViewModel.LoadTenantsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ServiPuntos.Mobile.ViewModels.TenantsViewModel.LoadTenantsAsync"/>.</summary>
+        </member>
+        <member name="T:ServiPuntos.Mobile.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>
