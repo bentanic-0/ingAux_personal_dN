@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q2NFp2Us7N4=",
+  "success": true,
+  "projectFilePath": "/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Core/ServiPuntos.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/bentanico/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

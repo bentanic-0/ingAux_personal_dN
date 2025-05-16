@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "wPWk+lAGEoo=",
+  "success": false,
+  "projectFilePath": "/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/ServiPuntos.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/Users/bentanico/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.Identity with version (>= 9.0.0)\n  - Found 40 version(s) in nuget.org [ Nearest version: 2.3.1 ]\n  - Found 0 version(s) in /usr/local/share/dotnet/library-packs",
+      "libraryId": "Microsoft.AspNetCore.Identity",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}

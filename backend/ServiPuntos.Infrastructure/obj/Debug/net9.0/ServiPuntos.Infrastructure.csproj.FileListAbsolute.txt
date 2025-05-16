@@ -1,0 +1,16 @@
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/bin/Debug/net9.0/ServiPuntos.Infrastructure.deps.json
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/bin/Debug/net9.0/ServiPuntos.Infrastructure.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/bin/Debug/net9.0/ServiPuntos.Infrastructure.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/bin/Debug/net9.0/ServiPuntos.Core.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/bin/Debug/net9.0/ServiPuntos.Core.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.csproj.AssemblyReference.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.AssemblyInfoInputs.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.AssemblyInfo.cs
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.sourcelink.json
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPun.02F508BD.Up2Date
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/refint/ServiPuntos.Infrastructure.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ServiPuntos.Infrastructure.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Infrastructure/obj/Debug/net9.0/ref/ServiPuntos.Infrastructure.dll

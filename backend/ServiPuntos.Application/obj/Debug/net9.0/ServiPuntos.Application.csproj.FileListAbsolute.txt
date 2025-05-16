@@ -1,0 +1,16 @@
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/bin/Debug/net9.0/ServiPuntos.Application.deps.json
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/bin/Debug/net9.0/ServiPuntos.Application.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/bin/Debug/net9.0/ServiPuntos.Application.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/bin/Debug/net9.0/ServiPuntos.Core.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/bin/Debug/net9.0/ServiPuntos.Core.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.csproj.AssemblyReference.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.AssemblyInfoInputs.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.AssemblyInfo.cs
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.csproj.CoreCompileInputs.cache
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.sourcelink.json
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPun.120285EF.Up2Date
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/refint/ServiPuntos.Application.dll
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ServiPuntos.Application.pdb
+/Users/bentanico/Desktop/Study/UTU/2025_1S/dotNET/ServiPuntos.uy/backend/ServiPuntos.Application/obj/Debug/net9.0/ref/ServiPuntos.Application.dll
