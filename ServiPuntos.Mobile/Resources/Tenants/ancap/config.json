@@ -1,9 +1,6 @@
 {
-    "tenantId": "ancap",
-    "nombre": "ServiPuntos Ancap",
-    "colorPrimario": "#FFC107",
-    "colorSecundario": "#212121",
-    "logo": "logo.png",
-    "apiUrl": "https://api.servipuntos.uy",
-    "nombreApp": "ServiPuntos Ancap"
+    "TenantId": "ancap",
+    "Nombre": "ServiPuntos ANCAP",
+    "ColorPrimario": "#FFC107",
+    "Logo": "logo.png"
 }

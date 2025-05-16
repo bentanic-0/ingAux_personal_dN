@@ -1,16 +1,19 @@
 using System.Text.Json;
-public static class TenantConfigService
+using ServiPuntos.Mobile.Models;
+
+namespace ServiPuntos.Mobile.Services
 {
-    public static TenantConfig Config { get; private set; }
-
-    public static async Task LoadTenantConfigAsync(string tenantId)
+    public static class TenantConfigService
     {
-        var assembly = typeof(TenantConfigService).Assembly;
-        var resourceName = $"ServiPuntos.Mobile.Resources.Tenants.{tenantId}.config.json";
+        public static TenantConfig Config { get; private set; } = new TenantConfig();
 
-        using Stream stream = assembly.GetManifestResourceStream(resourceName);
-        using StreamReader reader = new StreamReader(stream);
-        string json = await reader.ReadToEndAsync();
-        Config = JsonSerializer.Deserialize<TenantConfig>(json);
+        public static async Task LoadTenantConfigAsync(string tenantId)
+        {
+            var file = $"Resources/Tenants/{tenantId}/config.json";
+            using var stream = await FileSystem.OpenAppPackageFileAsync(file);
+            using var reader = new StreamReader(stream);
+            var json = await reader.ReadToEndAsync();
+            Config = JsonSerializer.Deserialize<TenantConfig>(json) ?? new TenantConfig();
+        }
     }
 }

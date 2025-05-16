@@ -1,12 +1,9 @@
-﻿using Microsoft.Maui.Controls;
+﻿namespace ServiPuntos.Mobile;
 
-namespace ServiPuntos.Mobile
+public partial class AppShell : Shell
 {
-	public partial class AppShell : Shell
+	public AppShell()
 	{
-		public AppShell()
-		{
-			InitializeComponent();
-		}
+		InitializeComponent();
 	}
 }

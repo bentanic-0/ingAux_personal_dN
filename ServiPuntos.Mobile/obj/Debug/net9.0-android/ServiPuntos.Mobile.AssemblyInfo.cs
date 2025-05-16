@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiPuntos.Mobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+64f9ac2957dcc8d64db6fb670e275a4e63be5ba3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0417d66add61a8342a2ae3fd562383200522c939")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiPuntos.Mobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiPuntos.Mobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
